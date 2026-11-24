@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geolocalización Consciente</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main>
+    <h1>Geolocalización Consciente</h1>
+
+    <button id="btn-adjuntar" type="button">Adjuntar mi ubicación</button>
+
+    <section id="prepermiso" hidden>
+      <p>Usaremos tu ubicación para mostrar las coordenadas y su margen de precisión en esta práctica. La aplicación no guardará ni enviará tus coordenadas a un servidor. Si prefieres no compartirlas, puedes seleccionar tu zona manualmente.</p>
+      <button id="btn-compartir" type="button">Compartir mi ubicación</button>
+      <button id="btn-manual" type="button">Seleccionar zona manualmente</button>
+    </section>
+
+    <p id="estado" role="status"></p>
+
+    <section id="resultados"></section>
+
+    <section id="instrucciones-ios" hidden>
+      <p>Para instalar en iPhone, pulsa el icono Compartir y selecciona “Agregar a inicio”.</p>
+    </section>
+
+    <section id="selector-manual" hidden>
+      <label for="zona">Zona manual</label>
+      <select id="zona">
+        <option value="">Selecciona una zona</option>
+        <option value="Cuernavaca">Cuernavaca</option>
+        <option value="Jiutepec">Jiutepec</option>
+        <option value="Emiliano Zapata">Emiliano Zapata</option>
+        <option value="Temixco">Temixco</option>
+        <option value="Otra zona">Otra zona</option>
+      </select>
+    </section>
+  </main>
+
+  <script src="./geo-helper.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
